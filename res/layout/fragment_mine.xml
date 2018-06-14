@@ -1,0 +1,337 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MineFragment" >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:id="@+id/scr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 表格布局 -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <!-- 第一行 -->
+
+            <TableRow>
+
+                <RelativeLayout
+                    android:id="@+id/rl_one_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_one_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_local_music" />
+
+                    <TextView
+                        android:id="@+id/tv_one_one"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_one_one"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="我的音乐" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_one_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_one_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_favorites" />
+
+                    <TextView
+                        android:id="@+id/tv_one_two"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_one_two"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="我的最爱" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_one_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_one_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_folder_plus" />
+
+                    <TextView
+                        android:id="@+id/tv_one_three"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_one_three"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="文件夹" />
+                </RelativeLayout>
+            </TableRow>
+            <!-- 第二行 -->
+
+            <TableRow android:layout_marginTop="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_two_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_two_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_artist_plus" />
+
+                    <TextView
+                        android:id="@+id/tv_two_one"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_two_one"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="歌手" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_two_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_two_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_album_plus" />
+
+                    <TextView
+                        android:id="@+id/tv_two_two"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_two_two"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="专辑" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_two_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_two_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_recent_play_plus" />
+
+                    <TextView
+                        android:id="@+id/tv_two_three"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_two_three"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="最近播放" />
+                </RelativeLayout>
+            </TableRow>
+            <!-- 第三行 -->
+
+            <TableRow android:layout_marginTop="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_three_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_three_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_genre_plus" />
+
+                    <TextView
+                        android:id="@+id/tv_three_one"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_three_one"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="风格" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_three_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_three_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_recent_add_plus" />
+
+                    <TextView
+                        android:id="@+id/tv_three_two"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_three_two"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="最近添加" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_three_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_three_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_new_playlist" />
+
+                    <TextView
+                        android:id="@+id/tv_three_three"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_three_three"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="新建列表" />
+                </RelativeLayout>
+            </TableRow>
+            <!-- 第四行 -->
+
+            <TableRow android:layout_marginTop="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_four_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_four_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_download" />
+
+                    <TextView
+                        android:id="@+id/tv_four_one"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_four_one"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="下载管理" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_four_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_four_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_library_music_circle" />
+
+                    <TextView
+                        android:id="@+id/tv_four_two"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_four_two"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="音乐圈" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_four_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#50999999" >
+
+                    <ImageView
+                        android:id="@+id/img_four_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_home_custom" />
+
+                    <TextView
+                        android:id="@+id/tv_four_three"
+                        style="@style/MainTableTxtStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_four_three"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="6dp"
+                        android:text="定制首页" />
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context=".MainActivity" >
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/rbMainStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="我的" />
+
+        <RadioButton
+            android:id="@+id/rb_findMisic"
+            style="@style/rbMainStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="淘歌" />
+
+        <RadioButton
+            android:id="@+id/rb_search"
+            style="@style/rbMainStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="搜索" />
+
+        <RadioButton
+            android:id="@+id/rb_recommend"
+            style="@style/rbMainStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="推荐" />
+    </RadioGroup>
+    <!-- ViewPager + Fragment -->
+
+
+    <!-- ViewPager滑动页 -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_main_bottom"
+        android:layout_below="@+id/rg_main" >
+    </android.support.v4.view.ViewPager>
+
+    <!-- 底部功能栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:id="@+id/img_main_bottom_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_album_background" />
+
+        <ImageView
+            android:id="@+id/img_main_bottom_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_menu_point" />
+        <!-- 中间那条线 -->
+
+        <View
+            android:id="@+id/line_vertical"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/img_main_bottom_right"
+            android:background="#ffffff" />
+
+        <View
+            android:id="@+id/line_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ffffff" />
+
+        <ImageView
+            android:id="@+id/img_main_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/line_vertical"
+            android:src="@android:drawable/ic_media_next" />
+
+        <ImageView
+            android:id="@+id/img_main_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/img_main_next"
+            android:src="@android:drawable/ic_media_play" />
+
+        <LinearLayout
+            android:id="@+id/ll_main_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/img_main_play"
+            android:layout_toRightOf="@+id/img_main_bottom_left"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_main_singer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="unknown"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_main_musicname"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="unknown"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_music_info"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_main_currenttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tv_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_main_currenttime"
+                    android:text="-"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tv_main_totaltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_line"
+                    android:text="00:00"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
